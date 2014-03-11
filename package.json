@@ -1,0 +1,36 @@
+{
+  "name": "npm-flat-graph",
+  "description": "Given a list of modules, recursively retrieve their dependency graph and generate a flat list of each module's dependencies",
+  "version": "0.0.0",
+  "main": "index.js",
+  "browser": "index.js",
+  "dependencies": {
+    "flatten": "0.0.1",
+    "uniq": "0.0.2",
+    "debug": "^0.7.4",
+    "map-async": "^0.1.1",
+    "npm-stats": "^0.3.0",
+    "semver": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/npm-flat-graph"
+  },
+  "bugs": {
+    "url": "https://github.com/hughsk/npm-flat-graph/issues"
+  },
+  "homepage": "https://github.com/hughsk/npm-flat-graph",
+  "keywords": [
+    "npm",
+    "graph",
+    "dependency",
+    "tree",
+    "flat",
+    "meta",
+    "data"
+  ]
+}
