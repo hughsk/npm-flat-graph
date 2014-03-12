@@ -7,8 +7,21 @@ var uniq    = require('uniq')
 
 module.exports = getGraph
 
-function getGraph(modules, done) {
+function getGraph(modules, opts, done) {
+  if (typeof opts === 'function') {
+    done = opts
+    opts = {}
+  }
+
+  opts = opts || {}
+
   var results = {}
+  var exclude = opts.exclude || []
+
+  exclude = exclude.reduce(function(memo, name) {
+    memo[name] = true
+    return memo
+  }, {})
 
   modules = Array.isArray(modules)
     ? modules
@@ -35,7 +48,9 @@ function getGraph(modules, done) {
 
         var dependencies = Object.keys(
           latest.dependencies || {}
-        )
+        ).filter(function(name) {
+          return !exclude[name]
+        })
 
         debug('found %s dependencies for %s', dependencies.length, name)
         results[name] = dependencies

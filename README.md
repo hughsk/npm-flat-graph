@@ -9,7 +9,7 @@ tree, generally for visualisation/analysis.
 
 [![npm-flat-graph](https://nodei.co/npm/npm-flat-graph.png?mini=true)](https://nodei.co/npm/npm-flat-graph)
 
-### `getGraph(modules, done)`
+### `getGraph(modules, [opts], done)`
 
 This function takes an array of `modules` by name, calling `done(err, results)`
 when complete, supplying you with an index formatted like so:
@@ -27,6 +27,12 @@ when complete, supplying you with an index formatted like so:
   'amdefine': []
 }
 ```
+
+You can also pass the following options:
+
+* `opts.exclude`: an array of module names to not include in the final output.
+  Its dependencies won't be resolved either, so is useful for elimating unwanted
+  development dependencies and the like.
 
 ## License ##
 
