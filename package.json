@@ -1,7 +1,7 @@
 {
   "name": "npm-flat-graph",
   "description": "Given a list of modules, recursively retrieve their dependency graph and generate a flat list of each module's dependencies",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "browser": "index.js",
   "dependencies": {
